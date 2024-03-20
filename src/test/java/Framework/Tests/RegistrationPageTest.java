@@ -10,11 +10,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-<<<<<<< HEAD
-import java.io.IOException;
 
-=======
->>>>>>> 05f6de3e67759c51452fa50f7635f3ff2036d723
+
 public class RegistrationPageTest {
     private WebDriver driver;
     private RegistrationPage registrationPage;
@@ -45,11 +42,7 @@ public class RegistrationPageTest {
         // Test Data
         String firstName = "John";
         String lastName = "Doe";
-<<<<<<< HEAD
-        String email = "nomail123@gmail.com";
-=======
-        String email = "nomail1234@gmail.com";
->>>>>>> 05f6de3e67759c51452fa50f7635f3ff2036d723
+        String email = "no1mail123@gmail.com";
         String phone = "82728";
         String password = "123456";
         String passwordConfirmation = "123456";
@@ -77,9 +70,4 @@ public class RegistrationPageTest {
         }
 
 
-    }
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> 05f6de3e67759c51452fa50f7635f3ff2036d723
+    }}
