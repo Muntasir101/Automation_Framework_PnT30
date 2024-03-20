@@ -20,10 +20,12 @@ public class Common {
         return email.toString();
     }
     public static void writeFile(String filePath, String content) throws IOException {
-        // Create a BufferedWriter to write to the file
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
+        // Create a BufferedWriter to append to the file
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))) {
             // Write the content to the file
             writer.write(content);
+            // Write a new line after the content
+            writer.newLine();
         } catch (IOException e) {
             // Handle any errors that may occur during writing
             throw e; // Rethrow the exception to be handled by the caller

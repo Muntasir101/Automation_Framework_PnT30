@@ -11,6 +11,8 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import utils.Common;
 
+import java.io.IOException;
+
 public class RegistrationPageTest {
     private WebDriver driver;
     private RegistrationPage registrationPage;
@@ -37,11 +39,12 @@ public class RegistrationPageTest {
     }
 
     @Test
-    public void RegistrationTest() {
+    public void RegistrationTest() throws IOException {
+        String newEmail = Common.randomEmail();
         // Test Data
         String firstName = "John";
         String lastName = "Doe";
-        String email = Common.randomEmail();
+        String email = newEmail;
         String phone = "82728";
         String password = "123456";
         String passwordConfirmation = "123456";
@@ -51,6 +54,7 @@ public class RegistrationPageTest {
         registrationPage.enterFirstName(firstName);
         registrationPage.enterLastName(lastName);
         registrationPage.enterEmailAddress(email);
+        Common.writeFile("src/test/java/Framework/data/valid_users.txt",newEmail);
         registrationPage.enterPhoneNumber(phone);
         registrationPage.enterPassword(password);
         registrationPage.enterPasswordConfirmation(passwordConfirmation);
