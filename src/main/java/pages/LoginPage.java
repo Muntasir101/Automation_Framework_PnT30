@@ -1,37 +1,26 @@
 package pages;
 
-import org.openqa.selenium.By;
+import base.BasePage;
+import locators.LoginPageLocators;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
-public class LoginPage {
-    private final WebDriver driver;
-    private WebElement EmailAddress;
-    private WebElement Password_field;
-    private WebElement LoginButton;
+
+public class LoginPage extends BasePage {
 
     // Create a constructor
     public LoginPage(WebDriver driver){
-        this.driver = driver;
-        initializeElement();
-    }
-
-    // define Locators
-    private void initializeElement(){
-        EmailAddress = driver.findElement(By.cssSelector("input#input-email"));
-        Password_field = driver.findElement(By.cssSelector("input#input-password"));
-        LoginButton = driver.findElement(By.cssSelector("[action] .btn-primary"));
+        super(driver);
     }
 
     public void enterEmailAddress(String email){
-        EmailAddress.clear();
-        EmailAddress.sendKeys(email);
+        driver.findElement(LoginPageLocators.EMAIL_INPUT).clear();
+        driver.findElement(LoginPageLocators.EMAIL_INPUT).sendKeys(email);
     }
     public void enterPassword(String password){
-        Password_field.clear();
-        Password_field.sendKeys(password);
+        driver.findElement(LoginPageLocators.PASSWORD_INPUT).clear();
+        driver.findElement(LoginPageLocators.PASSWORD_INPUT).sendKeys(password);
     }
     public void clickLoginButton(){
-        LoginButton.click();
+        driver.findElement(LoginPageLocators.LOGIN_BUTTON).click();
     }
 }
