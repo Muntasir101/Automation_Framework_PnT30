@@ -1,4 +1,4 @@
-package Pages;
+package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -81,15 +81,18 @@ public class RegistrationPage {
        PrivacyPolicy.click();
 =======
         PrivacyPolicy.click();
+<<<<<<< HEAD:src/main/java/Pages/RegistrationPage.java
 >>>>>>> 05f6de3e67759c51452fa50f7635f3ff2036d723
 
+=======
+>>>>>>> d7bc7132e25eccf3af5526da460635c23135e072:src/main/java/pages/RegistrationPage.java
     }
 
     public void continueButtonClick(){
-
         ContinueButton.click();
     }
 
+<<<<<<< HEAD:src/main/java/Pages/RegistrationPage.java
 
 
 <<<<<<< HEAD
@@ -97,3 +100,6 @@ public class RegistrationPage {
 =======
 }
 >>>>>>> 05f6de3e67759c51452fa50f7635f3ff2036d723
+=======
+}
+>>>>>>> d7bc7132e25eccf3af5526da460635c23135e072:src/main/java/pages/RegistrationPage.java
