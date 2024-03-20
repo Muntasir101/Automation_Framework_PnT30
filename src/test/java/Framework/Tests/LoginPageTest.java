@@ -9,6 +9,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import utils.PropertyReader;
 
 public class LoginPageTest {
     private WebDriver driver;
@@ -31,14 +32,18 @@ public class LoginPageTest {
         } else {
             System.out.println("Unsupported Browser !!!");
         }
-        driver.get("https://tutorialsninja.com/demo/index.php?route=account/login");
-        loginPage = new LoginPage(driver);
     }
     @Test
     public void LoginTest(){
+        PropertyReader propertyReader = new PropertyReader("src/main/java/config/baseConfig.properties");
+        String baseUrl = propertyReader.getProperty("baseUrl");
+
+        driver.get(baseUrl +"route=account/login"); // navigate Login page
+        loginPage = new LoginPage(driver); // initialize login page
+
         // Test Data
-        String email = "mail123@gmail.com";
-        String password = "123456";
+        String email = propertyReader.getProperty("validEmail"); // read email from properties file
+        String password = propertyReader.getProperty("validPassword"); // read password from properties file
 
         // perform login
         loginPage.enterEmailAddress(email);

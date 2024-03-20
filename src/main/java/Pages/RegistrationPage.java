@@ -42,12 +42,21 @@ public class RegistrationPage {
 
     }
     public void enterLastName(String lastName){
+<<<<<<< HEAD
             LastName.clear();
             LastName.sendKeys(lastName);
     }
     public void enterEmailAddress(String email){
     EmailAddress.clear();
     EmailAddress.sendKeys(email);
+=======
+        LastName.clear();
+        LastName.sendKeys(lastName);
+    }
+    public void enterEmailAddress(String email){
+        EmailAddress.clear();
+        EmailAddress.sendKeys(email);
+>>>>>>> 05f6de3e67759c51452fa50f7635f3ff2036d723
     }
 
     public void enterPhoneNumber(String phoneNumber){
@@ -68,7 +77,11 @@ public class RegistrationPage {
     }
 
     public void privacyPolicy(){
+<<<<<<< HEAD
        PrivacyPolicy.click();
+=======
+        PrivacyPolicy.click();
+>>>>>>> 05f6de3e67759c51452fa50f7635f3ff2036d723
 
     }
 
@@ -79,4 +92,8 @@ public class RegistrationPage {
 
 
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 05f6de3e67759c51452fa50f7635f3ff2036d723
