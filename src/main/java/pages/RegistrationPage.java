@@ -1,78 +1,53 @@
 package pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import base.BasePage;
+import locators.RegistrationPageLocators;
 import org.openqa.selenium.WebDriver;
-public class RegistrationPage {
+public class RegistrationPage extends BasePage {
 
-    private final WebDriver driver;
-    private WebElement FirstName;
-    private WebElement LastName;
-    private WebElement EmailAddress;
-
-    private WebElement PhoneNumber;
-    private WebElement Password;
-    private WebElement PasswordConfirmation;
-    private WebElement SubscribeNewsletter;
-    private WebElement PrivacyPolicy;
-    private WebElement ContinueButton;
 
     // Create a constructor
     public RegistrationPage(WebDriver driver){
-        this.driver = driver;
-        initializeElement();
-    }
-
-    private void initializeElement() {
-        FirstName = driver.findElement(By.cssSelector("#input-firstname"));
-        LastName = driver.findElement(By.cssSelector("#input-lastname"));
-        EmailAddress = driver.findElement(By.cssSelector("#input-email"));
-
-        PhoneNumber = driver.findElement(By.cssSelector("#input-telephone"));
-        Password = driver.findElement(By.cssSelector("#input-password"));
-        PasswordConfirmation = driver.findElement(By.cssSelector("#input-confirm"));
-        SubscribeNewsletter = driver.findElement(By.cssSelector(".form-horizontal .radio-inline:nth-of-type(2) [type]"));
-        PrivacyPolicy = driver.findElement(By.cssSelector("[type='checkbox']"));
-        ContinueButton = driver.findElement(By.cssSelector(".btn-primary"));
+        super(driver);
     }
 
     public void enterFirstName(String firstName){
-        FirstName.clear();
-        FirstName.sendKeys(firstName);
+        driver.findElement(RegistrationPageLocators.FIRST_NAME_INPUT).clear();
+        driver.findElement(RegistrationPageLocators.FIRST_NAME_INPUT).sendKeys(firstName);
 
     }
     public void enterLastName(String lastName){
-        LastName.clear();
-        LastName.sendKeys(lastName);
+        driver.findElement(RegistrationPageLocators.LAST_NAME_INPUT).clear();
+        driver.findElement(RegistrationPageLocators.LAST_NAME_INPUT).sendKeys(lastName);
     }
     public void enterEmailAddress(String email){
-        EmailAddress.clear();
-        EmailAddress.sendKeys(email);
+        driver.findElement(RegistrationPageLocators.EMAIL_INPUT).clear();
+        driver.findElement(RegistrationPageLocators.EMAIL_INPUT).sendKeys(email);
     }
 
     public void enterPhoneNumber(String phoneNumber){
-        PhoneNumber.clear();
-        PhoneNumber.sendKeys(phoneNumber);
+        driver.findElement(RegistrationPageLocators.PHONE_INPUT).clear();
+        driver.findElement(RegistrationPageLocators.PHONE_INPUT).sendKeys(phoneNumber);
     }
     public void enterPassword(String password){
-        Password.clear();
-        Password.sendKeys(password);
+        driver.findElement(RegistrationPageLocators.PASSWORD_INPUT).clear();
+        driver.findElement(RegistrationPageLocators.PASSWORD_INPUT).sendKeys(password);
     }
     public void enterPasswordConfirmation(String passwordConfirmation){
-        PasswordConfirmation.clear();
-        PasswordConfirmation.sendKeys(passwordConfirmation);
+        driver.findElement(RegistrationPageLocators.PASSWORD_CONFIRM_INPUT).clear();
+        driver.findElement(RegistrationPageLocators.PASSWORD_CONFIRM_INPUT).sendKeys(passwordConfirmation);
     }
 
     public void subscribeNewsletter(){
-        SubscribeNewsletter.click();
+        driver.findElement(RegistrationPageLocators.SUBSCRIBE_BUTTON).click();
     }
 
     public void privacyPolicy(){
-        PrivacyPolicy.click();
+        driver.findElement(RegistrationPageLocators.PRIVACY_POLICY_BUTTON).click();
     }
 
     public void continueButtonClick(){
-        ContinueButton.click();
+        driver.findElement(RegistrationPageLocators.CONTINUE_BUTTON).click();
     }
 
 }

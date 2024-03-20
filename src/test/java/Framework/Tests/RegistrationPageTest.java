@@ -9,6 +9,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import utils.Common;
 
 public class RegistrationPageTest {
     private WebDriver driver;
@@ -40,7 +41,7 @@ public class RegistrationPageTest {
         // Test Data
         String firstName = "John";
         String lastName = "Doe";
-        String email = "nomail1234@gmail.com";
+        String email = Common.randomEmail();
         String phone = "82728";
         String password = "123456";
         String passwordConfirmation = "123456";
