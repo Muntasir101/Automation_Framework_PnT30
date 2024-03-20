@@ -1,4 +1,4 @@
-package Pages;
+package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -69,14 +69,10 @@ public class RegistrationPage {
 
     public void privacyPolicy(){
         PrivacyPolicy.click();
-
     }
 
     public void continueButtonClick(){
-
         ContinueButton.click();
     }
-
-
 
 }
