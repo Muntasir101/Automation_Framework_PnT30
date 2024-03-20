@@ -1,5 +1,6 @@
 package Framework.Tests;
 
+import org.testng.Reporter;
 import pages.LoginPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -21,16 +22,16 @@ public class LoginPageTest {
         if (browserName.equalsIgnoreCase("chrome")) {
             driver = new ChromeDriver();
             driver.manage().window().maximize();
-            System.out.println("Chrome browser is launched");
+            Reporter.log("Chrome browser is launched");
         } else if (browserName.equalsIgnoreCase("firefox")) {
             driver = new FirefoxDriver();
-            System.out.println("Firefox browser is launched");
+            Reporter.log("Firefox browser is launched");
         } else if (browserName.equalsIgnoreCase("edge")) {
             driver = new EdgeDriver();
             driver.manage().window().maximize();
-            System.out.println("EDGE browser is launched");
+            Reporter.log("EDGE browser is launched");
         } else {
-            System.out.println("Unsupported Browser !!!");
+            Reporter.log("Unsupported Browser !!!");
         }
     }
     @Test
@@ -39,6 +40,7 @@ public class LoginPageTest {
         String baseUrl = propertyReader.getProperty("baseUrl");
 
         driver.get(baseUrl +"route=account/login"); // navigate Login page
+        Reporter.log("Login page Open");
         loginPage = new LoginPage(driver); // initialize login page
 
         // Test Data
@@ -47,17 +49,21 @@ public class LoginPageTest {
 
         // perform login
         loginPage.enterEmailAddress(email);
+        Reporter.log("Enter Email: " + email);
         loginPage.enterPassword(password);
+        Reporter.log("Enter Password: "+password);
         loginPage.clickLoginButton();
+        Reporter.log("Click Login Button");
+        Reporter.log("Test Execution Complete");
     }
 
     @AfterMethod
     public void terminateTest() {
         if (driver != null) {
             driver.quit();
-            System.out.println("Test Complete");
+            Reporter.log("Tear Down");
         } else {
-            System.out.println("No Driver found.");
+            Reporter.log("No Driver found.");
         }
     }
 }

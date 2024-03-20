@@ -4,7 +4,7 @@
     <test name="Registration on Firefox">
         <parameter name="browserName" value="firefox"></parameter>
         <classes>
-            <class name="Framework.Tests.RegistrationPageTest"/>
+            <class name="Framework.Tests.LoginPageTest"/>
         </classes>
     </test>
 
