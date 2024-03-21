@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.time.Duration;
 
 import static io.qameta.allure.SeverityLevel.CRITICAL;
 
@@ -35,6 +36,8 @@ public class LoginPageTestAdv extends BaseTest {
         Reporter.log("Login page Open");
         loginPage = new LoginPage(driver); // initialize login page
 
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+
         step1_enter_Email();
         step2_enter_Password();
         step3_click_Login();
@@ -54,6 +57,11 @@ public class LoginPageTestAdv extends BaseTest {
         String screenShotPath = "Screenshots/"+email+".png";
         Reporter.log("<a href='" + screenShotPath + "' target ='_blank' >View Email Typed</a>");
 
+        // add screenshot in Allure
+        try (InputStream is = Files.newInputStream(Paths.get("test-output\\"+screenShotPath))) {
+            Allure.attachment("Email.png", is);
+        }
+
     }
     @Step("Step 2")
     public void step2_enter_Password() throws IOException {
@@ -68,6 +76,10 @@ public class LoginPageTestAdv extends BaseTest {
         String screenShotPath2 = "Screenshots/"+password+".png";
         Reporter.log("<a href='" + screenShotPath2 + "' target ='_blank' >View Password Typed</a>");
 
+        // add screenshot in Allure
+        try (InputStream is = Files.newInputStream(Paths.get("test-output\\"+screenShotPath2))) {
+            Allure.attachment("Password.png", is);
+        }
     }
     @Step("Step 3")
     public void step3_click_Login() throws IOException {
@@ -82,8 +94,8 @@ public class LoginPageTestAdv extends BaseTest {
         Reporter.log("Test Execution Complete");
 
         // add screenshot in Allure
-        try (InputStream is = Files.newInputStream(Paths.get("E:\\PnT_FT_30\\Projects\\Automation_Framework_PnT30\\test-output\\Screenshots\\LoginStatus.png"))) {
-            Allure.attachment("image.png", is);
+        try (InputStream is = Files.newInputStream(Paths.get("test-output\\Screenshots\\LoginStatus.png"))) {
+            Allure.attachment("Login_Status.png", is);
         }
     }
 }
