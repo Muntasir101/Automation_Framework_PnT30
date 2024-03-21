@@ -4,10 +4,10 @@
     <listeners>
         <listener class-name="io.qameta.allure.testng.AllureTestNg"></listener>
     </listeners>
-    <test name="Registration on Firefox">
+    <test name="Login on Firefox">
         <parameter name="browserName" value="firefox"></parameter>
         <classes>
-            <class name="tests.LoginPageTest"/>
+            <class name="tests.LoginPageTestAdv"/>
         </classes>
     </test>
 

@@ -5,17 +5,21 @@ import io.qameta.allure.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Reporter;
-import pages.LoginPage;
 import org.testng.annotations.Test;
+import pages.LoginPage;
 import utils.PropertyReader;
+
 import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 import static io.qameta.allure.SeverityLevel.CRITICAL;
 
 
-public class LoginPageTest extends BaseTest {
+public class LoginPageTestAdv extends BaseTest {
     private LoginPage loginPage;
-    private static final Logger logger = LogManager.getLogger(LoginPageTest.class);
+    private static final Logger logger = LogManager.getLogger(LoginPageTestAdv.class);
 
 
     @Test
@@ -31,10 +35,15 @@ public class LoginPageTest extends BaseTest {
         Reporter.log("Login page Open");
         loginPage = new LoginPage(driver); // initialize login page
 
-        // Test Data
-        String email = propertyReader.getProperty("validEmail"); // read email from properties file
-        String password = propertyReader.getProperty("validPassword"); // read password from properties file
+        step1_enter_Email();
+        step2_enter_Password();
+        step3_click_Login();
 
+    }
+    @Step("Step 1")
+    public void step1_enter_Email() throws IOException {
+        PropertyReader propertyReader = new PropertyReader("src/main/java/config/baseConfig.properties");
+        String email = propertyReader.getProperty("validEmail"); // read email from properties file
         // perform login
         loginPage.enterEmailAddress(email);
         Reporter.log("Enter Email: " + email);
@@ -45,6 +54,11 @@ public class LoginPageTest extends BaseTest {
         String screenShotPath = "Screenshots/"+email+".png";
         Reporter.log("<a href='" + screenShotPath + "' target ='_blank' >View Email Typed</a>");
 
+    }
+    @Step("Step 2")
+    public void step2_enter_Password() throws IOException {
+        PropertyReader propertyReader = new PropertyReader("src/main/java/config/baseConfig.properties");
+        String password = propertyReader.getProperty("validPassword"); // read password from properties file
         loginPage.enterPassword(password);
         Reporter.log("Enter Password: "+password);
         logger.info("Enter Password: "+password);
@@ -54,6 +68,9 @@ public class LoginPageTest extends BaseTest {
         String screenShotPath2 = "Screenshots/"+password+".png";
         Reporter.log("<a href='" + screenShotPath2 + "' target ='_blank' >View Password Typed</a>");
 
+    }
+    @Step("Step 3")
+    public void step3_click_Login() throws IOException {
         loginPage.clickLoginButton();
         Reporter.log("Click Login Button");
         logger.info("Click Login Button");
@@ -63,6 +80,10 @@ public class LoginPageTest extends BaseTest {
         Reporter.log("<a href='" + screenShotPath3 + "' target ='_blank' >Login_Status</a>");
 
         Reporter.log("Test Execution Complete");
-    }
 
+        // add screenshot in Allure
+        try (InputStream is = Files.newInputStream(Paths.get("E:\\PnT_FT_30\\Projects\\Automation_Framework_PnT30\\test-output\\Screenshots\\LoginStatus.png"))) {
+            Allure.attachment("image.png", is);
+        }
+    }
 }

@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Mar 21 11:27:39 BDT 2024","Thu Mar 21 11:27:42 BDT 2024","3142","TN_Suite","Registration on Firefox","tests.RegistrationPageTest","tests.RegistrationPageTest","RegistrationTest","RegistrationTest",""
+"passed","Thu Mar 21 12:02:16 BDT 2024","Thu Mar 21 12:02:24 BDT 2024","8048","TN_Suite","Login on Firefox","tests.LoginPageTest","tests.LoginPageTest","LoginTest","LoginTest","This test attempts to log into the website using a email and a password."
+"passed","Thu Mar 21 12:21:39 BDT 2024","Thu Mar 21 12:21:45 BDT 2024","6738","TN_Suite","Login on Firefox","tests.LoginPageTestAdv","tests.LoginPageTestAdv","LoginTest","LoginTest","This test attempts to log into the website using a email and a password."
