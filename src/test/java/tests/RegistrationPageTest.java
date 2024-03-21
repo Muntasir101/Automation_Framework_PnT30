@@ -2,9 +2,12 @@ package tests;
 
 
 import org.testng.Reporter;
+import pages.LoginPage;
 import pages.RegistrationPage;
 import org.testng.annotations.Test;
 import utils.Common;
+import utils.PropertyReader;
+
 import java.io.IOException;
 
 public class RegistrationPageTest extends BaseTest {
@@ -12,6 +15,10 @@ public class RegistrationPageTest extends BaseTest {
 
     @Test
     public void RegistrationTest() throws IOException {
+        PropertyReader propertyReader = new PropertyReader("src/main/java/config/baseConfig.properties");
+
+        registrationPage = new RegistrationPage(driver);
+
         String newEmail = Common.randomEmail();
         // Test Data
         String firstName = "John";
@@ -20,6 +27,10 @@ public class RegistrationPageTest extends BaseTest {
         String phone = "82728";
         String password = "123456";
         String passwordConfirmation = "123456";
+
+        String baseUrl = propertyReader.getProperty("baseUrl");
+
+        driver.get(baseUrl +"route=account/register"); // navigate Login page
 
         // perform registration
         registrationPage.enterFirstName(firstName);
