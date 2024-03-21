@@ -1,47 +1,14 @@
-package Framework.tests;
+package tests;
 
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
+
 import org.testng.Reporter;
 import pages.RegistrationPage;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import utils.Common;
-
-import java.io.File;
 import java.io.IOException;
 
-public class RegistrationPageTest {
-    private static WebDriver driver;
+public class RegistrationPageTest extends BaseTest {
     private RegistrationPage registrationPage;
-
-    @BeforeMethod
-    @Parameters("browserName")
-    public void launchBrowser(String browserName) {
-        if (browserName.equalsIgnoreCase("chrome")) {
-            driver = new ChromeDriver();
-            driver.manage().window().maximize();
-            System.out.println("Chrome browser is launched");
-        } else if (browserName.equalsIgnoreCase("firefox")) {
-            driver = new FirefoxDriver();
-            System.out.println("Firefox browser is launched");
-        } else if (browserName.equalsIgnoreCase("edge")) {
-            driver = new EdgeDriver();
-            driver.manage().window().maximize();
-            System.out.println("EDGE browser is launched");
-        } else {
-            System.out.println("Unsupported Browser !!!");
-        }
-        driver.get("https://tutorialsninja.com/demo/index.php?route=account/register");
-        registrationPage = new RegistrationPage(driver);
-    }
 
     @Test
     public void RegistrationTest() throws IOException {
@@ -53,7 +20,6 @@ public class RegistrationPageTest {
         String phone = "82728";
         String password = "123456";
         String passwordConfirmation = "123456";
-
 
         // perform registration
         registrationPage.enterFirstName(firstName);
@@ -79,10 +45,10 @@ public class RegistrationPageTest {
         // Add screenshot to Report
         String screenShotPath3 = "Screenshots/"+email+".png";
         Reporter.log("<a href='" + screenShotPath3 + "' target ='_blank' >View Email Typed</a>");
-        Common.writeFile("src/test/java/Framework/data/valid_users.txt",newEmail);
+        Common.writeFile("src/test/java/data/valid_users.txt",newEmail);
 
         registrationPage.enterPhoneNumber(phone);
-        Reporter.log("Enter Email: " + phone);
+        Reporter.log("Enter Phone: " + phone);
         //Capture screenshot
         captureScreenshot(phone);
         // Add screenshot to Report
@@ -98,7 +64,7 @@ public class RegistrationPageTest {
         Reporter.log("<a href='" + screenShotPath5 + "' target ='_blank' >View Password Typed</a>");
 
         registrationPage.enterPasswordConfirmation(passwordConfirmation);
-        Reporter.log("Enter Email: " + passwordConfirmation);
+        Reporter.log("Enter Confirm Password: " + passwordConfirmation);
         //Capture screenshot
         captureScreenshot(passwordConfirmation);
         // Add screenshot to Report
@@ -116,17 +82,4 @@ public class RegistrationPageTest {
         Reporter.log("<a href='" + screenShotPath7 + "' target ='_blank' >View Registration Status</a>");
     }
 
-    @AfterMethod
-    public void terminateTest() {
-        if (driver != null) {
-            driver.quit();
-            System.out.println("Test Complete");
-        } else {
-            System.out.println("No Driver found.");
-        }
-    }
-    public static void captureScreenshot(String screenShotName) throws IOException, IOException {
-        File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(srcFile, new File("test-output/Screenshots/"+screenShotName+".png"),true);
-    }
 }
