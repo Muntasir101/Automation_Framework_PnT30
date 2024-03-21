@@ -1,5 +1,6 @@
 package tests;
 
+import io.qameta.allure.testng.AllureTestNg;
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -12,11 +13,13 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 
 import java.io.File;
 import java.io.IOException;
 
+@Listeners({AllureTestNg.class})
 public class BaseTest {
     protected static WebDriver driver;
     private static final Logger logger = LogManager.getLogger(BaseTest.class);

@@ -1,6 +1,7 @@
 package tests;
 
 
+import io.qameta.allure.Description;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Reporter;
@@ -17,6 +18,7 @@ public class LoginPageTest extends BaseTest {
 
 
     @Test
+    @Description("Test Login Functionality")
     public void LoginTest() throws IOException {
         PropertyReader propertyReader = new PropertyReader("src/main/java/config/baseConfig.properties");
         String baseUrl = propertyReader.getProperty("baseUrl");

@@ -30,7 +30,7 @@ public class RegistrationPageTest extends BaseTest {
 
         String baseUrl = propertyReader.getProperty("baseUrl");
 
-        driver.get(baseUrl +"route=account/register"); // navigate Login page
+        driver.get(baseUrl +"route=account/register"); // navigate registration page
 
         // perform registration
         registrationPage.enterFirstName(firstName);
