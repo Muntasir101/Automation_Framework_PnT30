@@ -1,5 +1,9 @@
-package Framework.Tests;
+package Framework.tests;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.io.FileHandler;
 import org.testng.Reporter;
 import pages.LoginPage;
 import org.openqa.selenium.WebDriver;
@@ -12,9 +16,14 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import utils.PropertyReader;
 
+import java.io.File;
+import java.io.IOException;
+
+
 public class LoginPageTest {
-    private WebDriver driver;
+    private static WebDriver driver;
     private LoginPage loginPage;
+
 
     @BeforeMethod
     @Parameters("browserName")
@@ -35,7 +44,7 @@ public class LoginPageTest {
         }
     }
     @Test
-    public void LoginTest(){
+    public void LoginTest() throws IOException {
         PropertyReader propertyReader = new PropertyReader("src/main/java/config/baseConfig.properties");
         String baseUrl = propertyReader.getProperty("baseUrl");
 
@@ -50,10 +59,27 @@ public class LoginPageTest {
         // perform login
         loginPage.enterEmailAddress(email);
         Reporter.log("Enter Email: " + email);
+        //Capture screenshot
+        captureScreenshot(email);
+        // Add screenshot to Report
+        String screenShotPath = "Screenshots/"+email+".png";
+        Reporter.log("<a href='" + screenShotPath + "' target ='_blank' >View Email Typed</a>");
+
         loginPage.enterPassword(password);
         Reporter.log("Enter Password: "+password);
+        //Capture screenshot
+        captureScreenshot(password);
+        // Add screenshot to Report
+        String screenShotPath2 = "Screenshots/"+password+".png";
+        Reporter.log("<a href='" + screenShotPath2 + "' target ='_blank' >View Password Typed</a>");
+
         loginPage.clickLoginButton();
         Reporter.log("Click Login Button");
+        captureScreenshot(password);
+        // Add screenshot to Report
+        String screenShotPath3 = "Screenshots/"+"Login_Status"+".png";
+        Reporter.log("<a href='" + screenShotPath2 + "' target ='_blank' >Login_Status</a>");
+
         Reporter.log("Test Execution Complete");
     }
 
@@ -65,5 +91,14 @@ public class LoginPageTest {
         } else {
             Reporter.log("No Driver found.");
         }
+    }
+
+    public static void captureScreenshot(String screenShotName) throws IOException, IOException {
+        File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(srcFile, new File("test-output/Screenshots/"+screenShotName+".png"),true);
+    }
+    public static void captureFullPageScreenshot(String screenShotName) throws IOException {
+        File src = ((FirefoxDriver)driver).getFullPageScreenshotAs(OutputType.FILE);
+        FileHandler.copy(src, new File("test-output/Screenshots/"+screenShotName+".png"));
     }
 }

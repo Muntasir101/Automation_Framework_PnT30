@@ -1,8 +1,16 @@
 package utils;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.io.FileHandler;
+
 import java.io.*;
 import java.util.Random;
 
 public class Common {
+
     public static String randomEmail() {
         String allowedChars = "abcdefghijklmnopqrstuvwxyz1234567890";
         StringBuilder email = new StringBuilder();
@@ -38,4 +46,5 @@ public class Common {
         reader.close();
         return line;
     }
+
 }

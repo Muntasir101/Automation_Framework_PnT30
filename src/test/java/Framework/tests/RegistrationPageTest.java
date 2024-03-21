@@ -1,4 +1,4 @@
-package Framework.Tests;
+package Framework.tests;
 
 import pages.RegistrationPage;
 import org.openqa.selenium.WebDriver;
@@ -71,7 +71,5 @@ public class RegistrationPageTest {
         } else {
             System.out.println("No Driver found.");
         }
-
-
     }
 }
