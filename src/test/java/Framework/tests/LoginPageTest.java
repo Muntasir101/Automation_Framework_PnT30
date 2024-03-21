@@ -97,8 +97,5 @@ public class LoginPageTest {
         File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(srcFile, new File("test-output/Screenshots/"+screenShotName+".png"),true);
     }
-    public static void captureFullPageScreenshot(String screenShotName) throws IOException {
-        File src = ((FirefoxDriver)driver).getFullPageScreenshotAs(OutputType.FILE);
-        FileHandler.copy(src, new File("test-output/Screenshots/"+screenShotName+".png"));
-    }
+
 }
