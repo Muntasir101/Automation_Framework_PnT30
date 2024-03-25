@@ -82,3 +82,21 @@
 25-03-2024 10:08:32 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Enter Password: 123456
 25-03-2024 10:08:32 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Click Login Button
 25-03-2024 10:08:34 [TestNG-test-Login on Firefox-1] INFO  tests.BaseTest - Tear Down
+25-03-2024 11:17:34 [main] INFO  tests.BaseTest - Unsupported Browser !!!
+25-03-2024 11:17:34 [main] INFO  tests.BaseTest - No Driver found.
+25-03-2024 11:17:34 [main] INFO  tests.BaseTest - Unsupported Browser !!!
+25-03-2024 11:17:34 [main] INFO  tests.BaseTest - No Driver found.
+25-03-2024 11:22:25 [TestNG-test-Login on Firefox-1] INFO  tests.BaseTest - Firefox browser is launched
+25-03-2024 11:22:28 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Enter Email: invalidEamil1@gmail.com
+25-03-2024 11:22:28 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Enter Password: 123213
+25-03-2024 11:22:29 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Click Login Button
+25-03-2024 11:22:30 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Enter Email: invalidEamil2@gmail.com
+25-03-2024 11:22:30 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Enter Password: 12312
+25-03-2024 11:22:30 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Click Login Button
+25-03-2024 11:22:31 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Enter Email: invalidEamil3@gmail.com
+25-03-2024 11:22:31 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Enter Password: 123123
+25-03-2024 11:22:32 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Click Login Button
+25-03-2024 11:22:33 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Enter Email: z9tz8fot3h@gmail.com
+25-03-2024 11:22:33 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Enter Password: 123456
+25-03-2024 11:22:33 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Click Login Button
+25-03-2024 11:22:34 [TestNG-test-Login on Firefox-1] INFO  tests.BaseTest - Tear Down
