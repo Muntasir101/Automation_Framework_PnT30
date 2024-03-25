@@ -18,3 +18,67 @@
 25-03-2024 09:23:49 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest - Enter Password: 123456
 25-03-2024 09:23:49 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest - Click Login Button
 25-03-2024 09:23:50 [TestNG-test-Login on Firefox-1] INFO  tests.BaseTest - Tear Down
+25-03-2024 09:53:47 [TestNG-test-Login on Firefox-1] INFO  tests.BaseTest - Firefox browser is launched
+25-03-2024 09:53:50 [TestNG-test-Login on Firefox-1] INFO  tests.BaseTest - Tear Down
+25-03-2024 09:55:20 [TestNG-test-Login on Firefox-1] INFO  tests.BaseTest - Firefox browser is launched
+25-03-2024 09:55:22 [TestNG-test-Login on Firefox-1] INFO  tests.BaseTest - Tear Down
+25-03-2024 09:58:25 [TestNG-test-Login on Firefox-1] INFO  tests.BaseTest - Firefox browser is launched
+25-03-2024 09:58:28 [TestNG-test-Login on Firefox-1] INFO  tests.BaseTest - Tear Down
+25-03-2024 09:59:32 [TestNG-test-Login on Firefox-1] INFO  tests.BaseTest - Firefox browser is launched
+25-03-2024 09:59:39 [TestNG-test-Login on Firefox-1] INFO  tests.BaseTest - Tear Down
+25-03-2024 10:00:34 [TestNG-test-Login on Firefox-1] INFO  tests.BaseTest - Firefox browser is launched
+25-03-2024 10:00:37 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Enter Email: invalidEamil1@gmail.com
+25-03-2024 10:00:37 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Enter Password: 123213
+25-03-2024 10:00:37 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Click Login Button
+25-03-2024 10:00:37 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Enter Email: invalidEamil2@gmail.com
+25-03-2024 10:00:37 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Enter Password: 12312
+25-03-2024 10:00:38 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Click Login Button
+25-03-2024 10:00:38 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Enter Email: invalidEamil3@gmail.com
+25-03-2024 10:00:38 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Enter Password: 123123
+25-03-2024 10:00:38 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Click Login Button
+25-03-2024 10:00:38 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Enter Email: z9tz8fot3h@gmail.com
+25-03-2024 10:00:39 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Enter Password: 123456
+25-03-2024 10:00:39 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Click Login Button
+25-03-2024 10:00:40 [TestNG-test-Login on Firefox-1] INFO  tests.BaseTest - Tear Down
+25-03-2024 10:01:24 [TestNG-test-Login on Firefox-1] INFO  tests.BaseTest - Firefox browser is launched
+25-03-2024 10:01:27 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Enter Email: invalidEamil1@gmail.com
+25-03-2024 10:01:27 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Enter Password: 123213
+25-03-2024 10:01:27 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Click Login Button
+25-03-2024 10:01:27 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Enter Email: invalidEamil2@gmail.com
+25-03-2024 10:01:27 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Enter Password: 12312
+25-03-2024 10:01:28 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Click Login Button
+25-03-2024 10:01:28 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Enter Email: invalidEamil3@gmail.com
+25-03-2024 10:01:28 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Enter Password: 123123
+25-03-2024 10:01:28 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Click Login Button
+25-03-2024 10:01:28 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Enter Email: z9tz8fot3h@gmail.com
+25-03-2024 10:01:29 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Enter Password: 123456
+25-03-2024 10:01:29 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Click Login Button
+25-03-2024 10:01:30 [TestNG-test-Login on Firefox-1] INFO  tests.BaseTest - Tear Down
+25-03-2024 10:02:24 [TestNG-test-Login on Firefox-1] INFO  tests.BaseTest - Firefox browser is launched
+25-03-2024 10:02:26 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Enter Email: invalidEamil1@gmail.com
+25-03-2024 10:02:26 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Enter Password: 123213
+25-03-2024 10:02:27 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Click Login Button
+25-03-2024 10:02:27 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Enter Email: invalidEamil2@gmail.com
+25-03-2024 10:02:27 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Enter Password: 12312
+25-03-2024 10:02:27 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Click Login Button
+25-03-2024 10:02:27 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Enter Email: invalidEamil3@gmail.com
+25-03-2024 10:02:28 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Enter Password: 123123
+25-03-2024 10:02:28 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Click Login Button
+25-03-2024 10:02:28 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Enter Email: z9tz8fot3h@gmail.com
+25-03-2024 10:02:28 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Enter Password: 123456
+25-03-2024 10:02:29 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Click Login Button
+25-03-2024 10:02:30 [TestNG-test-Login on Firefox-1] INFO  tests.BaseTest - Tear Down
+25-03-2024 10:08:27 [TestNG-test-Login on Firefox-1] INFO  tests.BaseTest - Firefox browser is launched
+25-03-2024 10:08:29 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Enter Email: invalidEamil1@gmail.com
+25-03-2024 10:08:29 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Enter Password: 123213
+25-03-2024 10:08:30 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Click Login Button
+25-03-2024 10:08:30 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Enter Email: invalidEamil2@gmail.com
+25-03-2024 10:08:30 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Enter Password: 12312
+25-03-2024 10:08:31 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Click Login Button
+25-03-2024 10:08:31 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Enter Email: invalidEamil3@gmail.com
+25-03-2024 10:08:31 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Enter Password: 123123
+25-03-2024 10:08:31 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Click Login Button
+25-03-2024 10:08:32 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Enter Email: z9tz8fot3h@gmail.com
+25-03-2024 10:08:32 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Enter Password: 123456
+25-03-2024 10:08:32 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest_DD - Click Login Button
+25-03-2024 10:08:34 [TestNG-test-Login on Firefox-1] INFO  tests.BaseTest - Tear Down
