@@ -1,0 +1,20 @@
+09:17:01.408 [TestNG-test-Login on Firefox-1] INFO  tests.BaseTest - Firefox browser is launched
+09:17:03.453 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest - Enter Email: mail123@gmail.com
+09:17:03.652 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest - Enter Password: 123456
+09:17:04.273 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest - Click Login Button
+09:17:05.413 [TestNG-test-Login on Firefox-1] INFO  tests.BaseTest - Tear Down
+85:03:2024 [TestNG-test-Login on Firefox-1] INFO  tests.BaseTest - Firefox browser is launched
+85:03:2024 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest - Enter Email: mail123@gmail.com
+85:03:2024 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest - Enter Password: 123456
+85:03:2024 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest - Click Login Button
+85:03:2024 [TestNG-test-Login on Firefox-1] INFO  tests.BaseTest - Tear Down
+25-03-2024 09:22:55.112 [TestNG-test-Login on Firefox-1] INFO  tests.BaseTest - Firefox browser is launched
+25-03-2024 09:22:56.835 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest - Enter Email: mail123@gmail.com
+25-03-2024 09:22:57.002 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest - Enter Password: 123456
+25-03-2024 09:22:57.488 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest - Click Login Button
+25-03-2024 09:22:58.605 [TestNG-test-Login on Firefox-1] INFO  tests.BaseTest - Tear Down
+25-03-2024 09:23:47 [TestNG-test-Login on Firefox-1] INFO  tests.BaseTest - Firefox browser is launched
+25-03-2024 09:23:49 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest - Enter Email: mail123@gmail.com
+25-03-2024 09:23:49 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest - Enter Password: 123456
+25-03-2024 09:23:49 [TestNG-test-Login on Firefox-1] INFO  tests.LoginPageTest - Click Login Button
+25-03-2024 09:23:50 [TestNG-test-Login on Firefox-1] INFO  tests.BaseTest - Tear Down
